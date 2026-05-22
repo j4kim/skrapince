@@ -12,7 +12,7 @@ def send(old_data, new_data):
     msg['Subject'] = config.MAIL_SUBJECT
     msg['From'] = config.MAIL_FROM
     msg['To'] = config.MAIL_TO
-    msg.set_content(f"{old_data} -> {new_data}")
+    msg.set_content(f"Data changed from \"{old_data}\" to \"{new_data}\"")
     s.send_message(msg)
     print("Email sent")
 

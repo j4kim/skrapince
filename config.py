@@ -17,4 +17,4 @@ MAIL_FROM = CONFIG["MAIL_FROM"]
 MAIL_TO = CONFIG["MAIL_TO"]
 MAIL_SUBJECT = CONFIG["MAIL_SUBJECT"]
 
-FILE = "element.html"
+FILE = "element.txt"

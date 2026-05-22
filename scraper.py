@@ -12,4 +12,4 @@ def scrape() -> str:
 
     element = soup.select_one(config.SELECTOR)
 
-    return str(element)
+    return element.get_text()
