@@ -28,3 +28,13 @@ Fill variables:
 ## Run
 
     python run.py
+
+## Cron
+
+Update crontab:
+
+    crontab -e
+
+Add something like:
+
+    */5 * * * * cd /path/to/skrapince && ./venv/bin/python run.py >> logs.log 2>&1
