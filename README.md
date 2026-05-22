@@ -1,11 +1,14 @@
-# Lake bot
+# Skrapince
 
-Scrape Neuchâtel lake temperature and send a notification if it goes over a threshold
+Simple Scraping of any website and send a notification if it changes.
 
 ## Set up
 
 Create and activate a virtual environmnent, then install the dependencies:
-pip install -r requirements.txt
+
+    python -m venv venv
+    source venv/bin/activate
+    pip install -r requirements.txt
 
 ## Run
 
