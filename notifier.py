@@ -2,7 +2,7 @@ import config
 from smtplib import SMTP
 from email.message import EmailMessage
 
-def send(new_temperature):
+def send(old_data, new_data):
     print("Connect to SMTP server")
     s = SMTP(config.SMTP_SERVER)
     s.starttls()
@@ -12,18 +12,17 @@ def send(new_temperature):
     msg['Subject'] = config.MAIL_SUBJECT
     msg['From'] = config.MAIL_FROM
     msg['To'] = config.MAIL_TO
-    msg.set_content(config.MAIL_BODY.format(new_temperature))
+    msg.set_content(f"{old_data} -> {new_data}")
     s.send_message(msg)
     print("Email sent")
 
 
-def check_and_notify(new_temperature, old_temperature):
-    if old_temperature == new_temperature:
-        print("Temperature did not change")
-        return
+def check_and_notify(new_data, old_data) -> bool:
+    if new_data == old_data:
+        print("No changes")
+        return False
 
-    print(f"Temperature changed from {old_temperature}° to {new_temperature}°")
+    print(f"Data changed from {old_data} to {new_data}")
 
-    if new_temperature > old_temperature and new_temperature >= config.TRESHOLD:
-        print("Temperature increased and is above treshold, sending notification")
-        send(new_temperature)
+    send(old_data, new_data)
+    return True
