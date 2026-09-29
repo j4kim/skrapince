@@ -21,8 +21,8 @@ Fill variables:
 - `URL`: The URL to scrape
 - `SELECTOR`: The selector of the element to check, example "body > p:nth-child(2)"
 - `SMTP_SERVER`, `SMTP_LOGIN`, `SMTP_PASSWORD`: SMTP host, login and password
-- `MAIL_FROM`: Example "Skrapince <skrapince@3sdl.ch>"
-- `MAIL_TO`: Can be a list of emails in the form "Person1 <person1@gmail.com>, Person2 <person2@gmail.com>"
+- `MAIL_FROM`: Example `"Skrapince <skrapince@3sdl.ch>"`
+- `MAIL_TO`: Can be a list of emails in the form `"Person1 <person1@gmail.com>, Person2 <person2@gmail.com>"`
 - `MAIL_SUBJECT`: Well, the subject of the email notification
 
 ## Run
