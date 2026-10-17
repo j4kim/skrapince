@@ -38,4 +38,4 @@ Update crontab:
 
 Add something like:
 
-    */5 * * * * cd /path/to/skrapince && ./venv/bin/python run.py >> logs.log 2>&1
+    */5 * * * * cd /path/to/skrapince && ./venv/bin/python run.py > /dev/null 2>> err.log
