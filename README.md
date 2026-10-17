@@ -24,6 +24,7 @@ Fill variables:
 - `MAIL_FROM`: Example "Skrapince <skrapince@3sdl.ch>"
 - `MAIL_TO`: Can be a list of emails in the form "Person1 <person1@gmail.com>, Person2 <person2@gmail.com>"
 - `MAIL_SUBJECT`: Well, the subject of the email notification
+- `RUN_SCRIPT`: Optional path to a `.sh` or `.py` script to run when data changes
 
 ## Run
 
